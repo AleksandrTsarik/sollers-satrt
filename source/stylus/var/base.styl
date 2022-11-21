@@ -1,0 +1,59 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,a,em,img,b,u,i,ol,ul,li,form,label,table,tbody,tfoot,thead,tr,th,td,input,textarea,button
+	margin 0
+	padding 0
+	border none medium
+html, body
+	font-size 16px
+	line-height 1.5
+	font-family $Montserrat
+	
+html
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+*, *:focus, *:after, *:before
+	-webkit-tap-highlight-color rgba(0, 0, 0, 0)
+	-moz-box-sizing border-box
+	box-sizing border-box
+	outline none
+
+a
+	text-decoration: none
+
+img
+	max-width: 100%;
+
+body
+	background-color: $bg
+	display: flex
+	font-size: 16px
+	flex-direction: column
+	min-height: 100vh
+	color: $text
+	overflow-x: hidden
+
+.page-container
+	flex-grow: 1
+	
+.wrapper
+	max-width: 1540px
+	margin: 0 auto
+	padding: 0 50px
+	&--small
+		max-width: 1300px
+		margin: 0 auto
+		padding: 0 50px
+
+.title
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 26px;
+	color: $text;
+	opacity: 0.8;
+	padding-bottom 75px
+input, select
+	outline: none
+	width: 100%
+select
+	border: none
+	

@@ -1,0 +1,60 @@
+.block-car
+   padding: 100px 0 70px
+   &__inner
+      box-shadow: 0px 10px 30px rgba(34, 31, 32, 0.15);
+      display: flex
+   &--left
+      .block-car__inner
+         flex-direction: row-reverse
+         margin-right auto
+      .block-car__bg
+         img
+            margin-right auto
+            margin-left 0
+   &__bg
+      //background-color: $orange
+      flex: 0 0 50%
+      max-width: 50%
+      display: flex
+      padding: 55px 0
+      img
+         margin-left auto
+   &__info
+      flex: 0 0 50%
+      max-width: 50%
+      padding: 95px
+      display: flex
+      flex-direction: column
+   &__text
+      font-weight: 400
+      font-size: 18px
+      line-height: 1.4em
+      opacity 0.86
+      position: relative
+      padding-bottom 25px
+      margin-bottom 25px
+      &:after
+         content: ''
+         width: 100px
+         height: 2px
+         background-color: $orange
+         display: block
+         position: absolute
+         left: 0
+         bottom: 0
+   &-function
+      &__list
+         display: flex
+         align-items: center
+      &__item + &__item
+         margin-left 20px
+   &__links
+      display: flex
+      margin-top auto 
+   &__link + &__link
+      margin-left 50px
+   &__link
+      a
+         text-decoration: underline
+         color: $text
+      

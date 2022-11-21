@@ -1,0 +1,28 @@
+-
+   var popup = [
+      {
+         title: 'Наименование дилера',
+         text: 'ООО «Кунцево Авто»',
+      },
+      {
+         title: 'Город',
+         text: 'Москва',
+      },
+      {
+         title: 'Адрес',
+         text: '143025, Московская область, город Одинцово,село Немчиновка, улица Московская, дом 61',
+      },
+      {
+         title: 'Телефон',
+         text: '7 (495) 933-40-33',
+      },
+   ]
+-;
+
+.map-popup
+   .map-popup__cross
+   .map-popup__inner
+      each item in popup
+         .map-popup__item
+            .map-popup__title !{item.title}
+            .map-popup__text !{item.text}

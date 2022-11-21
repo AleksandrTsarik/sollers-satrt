@@ -1,0 +1,97 @@
+.tabs
+   padding-bottom 95px
+   &-row
+      text-align: center
+      font-weight: 400
+      font-size: 12px
+      line-height: 2em
+      opacity: 0.7;
+      margin-bottom 25px
+   &__list
+      display: flex
+      justify-content: center
+      margin-bottom 5px
+   &__item + &__item
+      margin-left 30px
+   &__item
+      cursor: pointer
+      font-weight: 400
+      font-size: 20px
+      line-height: 1.2em
+      opacity: 0.89
+      &.is-active
+         font-weight 600
+         border-bottom 2px solid $orange
+   &-info
+      &__block
+         background-color: #FFFFFF
+         box-shadow: 0px 10px 30px rgba(34, 31, 32, 0.15)
+         padding: 55px 50px
+         display: flex
+         justify-content: space-between
+      &__inner
+         text-align: center
+      &__numb
+         font-weight: 500
+         font-size: 40px
+         line-height: 26px
+         opacity: 0.89
+         color: $orange
+         margin-bottom 20px
+         position: relative
+         sup
+            position: absolute
+            top: -0.4em
+         &-before
+            position: relative
+            padding-right 20px
+            &::after
+               content: ''
+               display: block
+               width: 0.25em
+               height: 0.25em
+               border-right: solid 3px
+               border-bottom: solid 3px
+               position: absolute
+               right: 0
+               top: 5px
+               transform: rotate(45deg)
+      &__text
+         font-weight: 400
+         font-size: 12px
+         line-height: 18px
+   &__link
+      text-align: right
+      margin-top 25px
+      font-weight: 500
+      font-size: 14px
+      line-height: 1.2em
+      letter-spacing: 0.05em
+      text-transform: uppercase
+      display: flex
+      a
+         position: relative
+         display: flex
+         align-items: center
+         margin-left auto
+         span
+            display: block
+            width: 1.8em
+            height: 1.8em
+            background-color: $orange
+            border-radius: 50%
+            margin-left 15px
+            position: relative
+            &::after
+               content: ''
+               position: absolute
+               left: 50%
+               top: 50%
+               
+               display: block
+               width: 7px
+               height: 7px
+               border-right: solid 1px white
+               border-bottom: solid 1px white
+               transform: translate(-50%, -50%) rotate(-45deg)
+

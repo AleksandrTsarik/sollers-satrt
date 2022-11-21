@@ -1,0 +1,51 @@
+mixin blockCar(param)
+   - var icons = ['/f/img/car-function/item1.svg', '/f/img/car-function/item2.svg','/f/img/car-function/item3.svg','/f/img/car-function/item4.svg','/f/img/car-function/item.svg',]
+   - var links = ['комплектация и цены', 'скачать брошюру']
+   .wrapper--small
+      .block-car(class="" + 'block-car--' + param.position)
+         .block-car__inner
+            .block-car__bg
+               img(src="" + param.image alt="")
+            .block-car__info
+               .block-car__text !{param.text}
+               .block-car-function__list
+                  each item,index in icons
+                     if index < param.iconCount
+                        .block-car-function__item
+                           img(src="" + item alt="...")
+               .block-car__links
+                  each item,index in links
+                     .block-car__link
+                        a(href="#") !{item}
+
+mixin formField(param)
+   if param.type == 'input'
+      .form-field(class="form-field--" + param.mode)
+         .form-field__wrapper(class="" + (param.locked?'is-locked':''))
+            input.form-field__input(type="text" placeholder="" + param.placeholder value="" + (param.value?param.value:''))
+         if param.error
+            .form-field__error!= param.error
+            
+   else if param.type == 'submit'
+      - var attr = {};
+      if param.submit
+         - attr.checked = 'submit';
+      .form-field(class="form-field--" + param.mode)
+         label.form-field__label
+            input(type="submit")&attributes(attr)
+      
+   else if param.type == 'checkbox'
+      - var attr = {};
+      if param.checked
+         - attr.checked = 'checked';
+      .form-field(class="form-field--" + param.mode)
+         label.form-field__label
+            input.form-field__checkbox(type="checkbox")&attributes(attr)
+            span.form-field__checked
+            span.form-field__label-name!= param.label
+
+
+   else if param.type == 'textarea'
+      .form-field(class="form-field--" + param.mode)
+         .form-field__wrapper
+            textarea.form-field__textarea(placeholder="" + param.placeholder)

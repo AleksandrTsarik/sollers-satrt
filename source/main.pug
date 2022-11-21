@@ -1,0 +1,35 @@
+extends layouts/default
+
+block pageVar
+   -pageTitle = 'main';
+block content
+   .page-container
+      
+      .block
+         include components/main-slider/main-slider
+
+      .block
+         include _blocks/block-car
+            +blockCar(carBlockRight)
+
+      .block
+         include components/car-img/car-img1
+
+      .block
+         include components/tabs/tab
+
+      .block
+         include _blocks/block-car
+            +blockCar(carBlockLeft)
+      
+      .block
+         include components/car-img/car-img2
+
+      .block
+         include components/tabs/tab
+
+      .block
+         include components/form/form
+
+      .block
+         include components/map/map

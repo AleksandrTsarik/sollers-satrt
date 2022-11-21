@@ -1,0 +1,16 @@
+extends layouts/default
+
+block pageVar
+	-pageTitle = 'Список страниц';
+
+block content
+	.page-container
+		.wrapper
+			div.pagelist(style="padding:50px 0")
+				a(href="/html/main.html") Главная страницаы
+
+	style.
+		.pagelist a{
+			display:block;
+			padding:5px 0;
+		}

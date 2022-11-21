@@ -1,0 +1,23 @@
+.form
+   .wrapper
+      .title Оставьте заявку на автомобиль
+      .form__inner
+         .form__inner-block
+            +formField({type:'input', placeholder:'Имя*', mode: 'name'})
+            +formField({type:'input', placeholder:'Телефон*', mode: 'phone'})
+            +formField({type:'input', placeholder:'E-mail*', mode: 'mail'})
+            .form-field.form-field--select
+               .form-field__wrapper
+                  select(name="select" placeholder="asdasdas")
+                     option(value="", selected='', disabled) Ваш город*
+                     option(value="Москва", ) Москва
+                     option(value="Санкт-петербург", ) Санкт-петербург
+                     option(value="Москва", ) Москва
+                     option(value="Санкт-петербург", ) Санкт-петербург
+         +formField({type:'textarea', placeholder:'Ваш комментарий', mode: 'textarea'})
+
+         .form-agreemen
+            include ../btn/btn
+            include ../checkbox/checkbox
+         .form-row * - поля, обязательные для заполнения
+            

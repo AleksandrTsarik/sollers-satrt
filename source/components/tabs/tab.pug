@@ -1,0 +1,61 @@
+-
+ var tab = [
+      {
+         number: '2 495 кг',
+         text: 'Грузоподъемность',
+      },
+      {
+         number: '9,5 м<sup>3</sup>',
+         text: 'Объем грузового пространства',
+      },
+      {
+         number: '1 939',
+         text: 'Погрузочная длина',
+      },
+      {
+         number: '515',
+         text: 'Погрузочная высота',
+      },
+      {
+         number: '4900',
+         text: 'ОБщая длина L1H1',
+         arrow: 'arrow',
+      },
+   ]
+-;
+-
+ var tabList = [
+   {
+      name: 'Промтоварный',
+      active: 'active',
+   },
+   {
+      name: 'Бортовой',
+      active: '',
+   },
+   {
+      name: 'Изотермический',
+      active: '',
+   },
+   {
+      name: 'Рефрижератор',
+      active: '',
+   }
+ ] 
+-;
+.wrapper--small
+   .tabs
+      .tabs__block 
+         .tabs__list
+            each item in tabList
+               .tabs__item(class="" + (item.active ? 'is-active': '')) !{item.name}
+         .tabs-row Тип кузова
+      .tabs-info__block
+         each item in tab
+            .tabs-info__inner
+               .tabs-info__numb(class="" + (item.arrow ? 'tabs-info__numb-before' : '')) !{item.number} 
+               .tabs-info__text !{item.text}
+      .tabs__link
+         a(href="#") Полные характеристки
+            span
+         

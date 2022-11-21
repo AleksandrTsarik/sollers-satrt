@@ -1,0 +1,12 @@
+footer.footer
+	.wrapper
+		.footer__inner 
+			.footer__top
+				.footer__logo
+					a(href="#" title="logo")
+						img(src="/f/img/logo-footer.png", alt="")
+				.footer-links
+					each item in ['Политика конфиденциальности','Файлы Cookies','Правила и условия']
+						a.footer-links__item(href="#") !{item}
+			.footer__bottom 
+				| © 2022 ПАО «СОЛЛЕРС Авто». Раскрытие информации на сайте Интерфакс–ЦРКИ
